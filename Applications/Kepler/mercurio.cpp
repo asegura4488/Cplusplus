@@ -35,7 +35,7 @@ int main()
   double v_y = 0.0, vn_y = 0.0, vn2_y = 0.0;  
 
   //Constantes
-  double alpha = 1.1e-8;  //Orden de 10-8
+  double alpha = 5.6e-7;  //Orden de 10-8
   double a = 0.39; //Mercurio
   //double a = 19.182; //Urano
   double eps = 0.206; //Mercurio
