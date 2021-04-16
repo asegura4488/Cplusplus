@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include<math.h>
 
+#include <iomanip>
+
 #define pi 3.141592654
 
 using namespace std;
@@ -35,7 +37,8 @@ int main()
   double v_y = 0.0, vn_y = 0.0, vn2_y = 0.0;  
 
   //Constantes
-  double alpha = 5.6e-7;  //Orden de 10-8
+  double alpha = 1.1e-8;
+  //double alpha = 5.6e-7;  //Orden de 10-8
   double a = 0.39; //Mercurio
   //double a = 19.182; //Urano
   double eps = 0.206; //Mercurio
@@ -86,6 +89,8 @@ int main()
       vn2_x = v_x + 0.5*(an_x + an2_x)*dt; //nueva velocudad x
       vn2_y = v_y + 0.5*(an_y + an2_y)*dt; //nueva velocidad y
 
+  //    if(i == 1e7)
+  //    std::cout << std::setprecision(10) << i << " " << t << " " << xn << " " << yn << " " << rn << std::endl;
       //Hallar el periodo
       if((rn > r) && (rn > rn2)) {
 	n++;
