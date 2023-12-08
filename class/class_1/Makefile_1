@@ -1,0 +1,19 @@
+DIR = .
+
+SRCDIR = $(DIR)/src
+INCDIR = $(DIR)/inc
+OBJDIR = $(DIR)/obj
+
+Message: $(OBJDIR)/main.o $(OBJDIR)/message.o
+	g++ $(OBJDIR)/main.o $(OBJDIR)/message.o -o Message
+
+$(OBJDIR)/main.o: $(SRCDIR)/main.cpp
+	g++ -c $(SRCDIR)/main.cpp -o $(OBJDIR)/main.o
+
+$(OBJDIR)/message.o: $(SRCDIR)/message.cpp
+	g++ -c $(SRCDIR)/message.cpp -o $(OBJDIR)/message.o 
+
+.PHONY: clean
+
+clean:
+	@rm $(EXE) $(OBJDIR)/*

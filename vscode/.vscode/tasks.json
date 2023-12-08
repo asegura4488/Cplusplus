@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C/C++: cpp compilar archivo activo", 
+            "type": "cppbuild",
+            "command": "/bin/g++",
+            "args": [ "-g", "test.cpp", "-o", "test.exe" ],
+            "group":{
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
